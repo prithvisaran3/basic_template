@@ -16,6 +16,7 @@ class HomeMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       bottomNavigationBar: Obx(() => CurvedNavigationBar(
             // key: _bottomNavigationKey,
             index: MainController.to.pageIndex,
@@ -49,7 +50,7 @@ class HomeMain extends StatelessWidget {
               MainController.to.isSelectIcon = index;
             },
             letIndexChange: (index) => true,
-          )),
+          ),),
       body: Obx(() => pages[MainController.to.pageIndex]),
     );
   }

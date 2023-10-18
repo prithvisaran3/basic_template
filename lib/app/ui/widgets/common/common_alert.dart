@@ -1,3 +1,4 @@
+import 'package:basic_template/app/ui/themes/font_size.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -53,7 +54,7 @@ commonAlertDialog(BuildContext context,
     backgroundColor: Colors.grey.shade300,
     title: Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: const [
+      children:  [
         Icon(
           Icons.warning_amber_rounded,
           color: Colors.red,
@@ -62,7 +63,7 @@ commonAlertDialog(BuildContext context,
         SizedBox(
           width: 10,
         ),
-        CommonText(text: "Alert")
+        CommonText(text: "Alert",style: headText(),)
       ],
     ),
     content: Row(
@@ -100,10 +101,10 @@ successAlert(BuildContext context,
       padding: const EdgeInsets.only(top: 15, bottom: 15),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10), color: Colors.green),
-      child: const Center(
+      child:  Center(
         child: CommonText(
           text: "Ok",
-          fontColor: AppColors.white,
+          style: boldText(color: AppColors.white),
         ),
       ),
     ),
@@ -125,6 +126,7 @@ successAlert(BuildContext context,
           children: [
             CommonText(
               text: content,
+              style: regularText(),
             )
           ],
         ),
@@ -176,10 +178,10 @@ errorAlert(BuildContext context,
             begin: Alignment.topRight,
             end: Alignment.topLeft),
       ),
-      child: const Center(
+      child:  Center(
         child: CommonText(
           text: "Ok",
-          fontColor: AppColors.white,
+          style: boldText(color: Colors.white),
         ),
       ),
     ),
@@ -202,6 +204,7 @@ errorAlert(BuildContext context,
             CommonText(
               textAlign: TextAlign.center,
               text: content,
+              style: regularText(),
             )
           ],
         ),
@@ -279,7 +282,7 @@ rejectDialog(BuildContext context,
     backgroundColor: Colors.grey.shade300,
     title: Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: const [
+      children:  [
         Icon(
           Icons.warning_amber_rounded,
           color: Colors.red,
@@ -288,7 +291,7 @@ rejectDialog(BuildContext context,
         SizedBox(
           width: 10,
         ),
-        CommonText(text: "Alert")
+        CommonText(text: "Alert",style: headText(),)
       ],
     ),
     content: Column(
@@ -384,7 +387,7 @@ updateAlertDialog(BuildContext context,
     backgroundColor: Colors.grey.shade300,
     title: Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: const [CommonText(text: "Update Available")],
+      children:  [CommonText(text: "Update Available",style: headText(),)],
     ),
     content: Row(
       mainAxisAlignment: MainAxisAlignment.center,

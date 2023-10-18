@@ -35,10 +35,8 @@ class CommonButton extends StatelessWidget {
         child: Center(
           child: CommonText(
             text: text,
-            fontColor: AppColors.white,
-            fontSize: 20,
-            fontWeight: FontWeight.bold,
-            letterSpacing: 1,
+            style: boldText(color:AppColors.white,size: 20,fontWeight: FontWeight.bold),
+          
           ),
         ),
       ),

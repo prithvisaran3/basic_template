@@ -13,9 +13,10 @@ class CommonText extends StatelessWidget {
       this.letterSpacing,
       this.textAlign,
       this.foreground,
-      this.isForeground})
+      this.isForeground, required this.style})
       : super(key: key);
   final String text;
+  final TextStyle style;
   final double fontSize;
   final double? letterSpacing;
   final Color? fontColor;
@@ -26,18 +27,11 @@ class CommonText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var media = MediaQuery.of(context).size;
 
     return Text(
       text,
       textAlign: textAlign,
-      style: TextStyle(
-          fontSize: fontSize,
-          fontWeight: fontWeight,
-          color: isForeground == true ? null : fontColor,
-          fontFamily: "Poppins",
-          foreground: foreground,
-          letterSpacing: letterSpacing),
+      style: style
     );
   }
 }

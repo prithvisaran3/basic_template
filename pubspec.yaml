@@ -53,6 +53,7 @@ dependencies:
   flutter_local_notifications: ^14.1.1
   flutter_automation: ^2.0.0
   shimmer: ^3.0.0
+  onboarding_animation: ^0.0.3
 
 
 
@@ -111,11 +112,20 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Oswald
-      fonts:
-        - asset: assets/fonts/oswald/Oswald-Regular.ttf
-    - family: Poppins
+    - family: PoppinsR
       fonts:
         - asset: assets/fonts/poppins/Poppins-Regular.ttf
+    - family: PoppinsM
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Medium.ttf
+    - family: PoppinsB
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Bold.ttf
+    - family: PoppinsL
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Light.ttf
+    - family: PoppinsSB
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-SemiBold.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

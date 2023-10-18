@@ -2,32 +2,49 @@ import 'package:flutter/material.dart';
 
 import 'colors.dart';
 
-headText(
-    {Color color = AppColors.black,
-      String fontFamily = 'medium',
-      double fontSize = 18.0}) {
+headText({size, family, color, fontWeight}) {
   return TextStyle(
-    fontSize: fontSize,
-    fontFamily: fontFamily,
-    color: color,
-  );
+      fontSize: size ?? 24,
+      fontFamily: family ?? 'PoppinsB',
+      color: color ?? Colors.black,
+      fontWeight: fontWeight ?? FontWeight.normal);
 }
-
-regularText(
-    {Color color = AppColors.black,
-      double fontSize = 14,
-      bool lineThrough = false}) {
+lightText({size, family, color, fontWeight}) {
   return TextStyle(
-      fontFamily: 'regular',
-      fontSize: fontSize,
-      color: color,
-      decoration: lineThrough == true ? TextDecoration.lineThrough : null);
+      fontFamily: family ?? 'PoppinsL',
+      fontSize: size ?? 16.0,
+      color: color ?? Colors.white,
+      fontWeight: fontWeight ?? FontWeight.normal);
 }
 
-boldText({Color color = AppColors.black, double fontSize = 24}) {
-  return TextStyle(fontSize: fontSize, fontFamily: 'bold', color: color);
+regularText({size, family, color, fontWeight}) {
+  return TextStyle(
+      fontFamily: family ?? 'PoppinsR',
+      fontSize: size ?? 16.0,
+      color: color ?? Colors.white,
+      fontWeight: fontWeight ?? FontWeight.normal);
 }
 
-mediumText({Color color = AppColors.black, double fontSize = 16}) {
-  return TextStyle(fontSize: fontSize, fontFamily: 'medium', color: color);
+boldText({size, family, color, fontWeight}) {
+  return TextStyle(
+      fontSize: size ?? 16.0,
+      fontFamily: family ?? 'PoppinsB',
+      color: color ?? Colors.white,
+
+      fontWeight: fontWeight ?? FontWeight.normal);
+}
+semiBoldText({size, family, color, fontWeight}) {
+  return TextStyle(
+      fontSize: size ?? 16.0,
+      fontFamily: family ?? 'PoppinsSB',
+      color: color ?? Colors.white,
+      fontWeight: fontWeight ?? FontWeight.normal);
+}
+
+mediumText({size, family, color, fontWeight}) {
+  return TextStyle(
+      fontSize: size ?? 16.0,
+      fontFamily: family ?? 'PoppinsM',
+      color: color ?? Colors.white,
+      fontWeight: fontWeight ?? FontWeight.normal);
 }

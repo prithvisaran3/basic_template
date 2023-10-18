@@ -1,3 +1,4 @@
+import 'package:basic_template/app/ui/screens/onboard_withanimation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../controller/auth.dart';
@@ -38,10 +39,10 @@ class _InitialState extends State<Initial> {
             }
           },
           builder: (controller) => isLogin == "onBoarding"
-              ? const OnBoarding()
+              ? const OnBoardingScreen()
               : isLogin == "isLogin"
                   ? HomeMain()
-                  :  HomeMain()),
+                  :  HomeMain(),),
     );
   }
 }

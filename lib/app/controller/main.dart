@@ -20,4 +20,11 @@ class MainController extends GetxController {
   set isSelectIcon(value) {
     _isSelectIcon.value = value;
   }
+  final _onBoardIndex=0.obs;
+
+  get onBoardIndex => _onBoardIndex.value;
+
+  set onBoardIndex(value) {
+    _onBoardIndex.value = value;
+  }
 }

@@ -1,4 +1,4 @@
-package com.example.investors;
+package com.example.basic_template;
 
 import io.flutter.embedding.android.FlutterActivity;
 
