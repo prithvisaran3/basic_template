@@ -1,4 +1,4 @@
-# investors
+# Template
 
 A new Flutter project.
 

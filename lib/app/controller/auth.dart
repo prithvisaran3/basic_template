@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../ui/screens/home/main.dart';
 
 
-import 'main.dart';
 
 class AuthController extends GetxController {
   static AuthController get to => Get.put(AuthController());
@@ -95,8 +93,8 @@ class AuthController extends GetxController {
 
   loginCheck() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
-    var token = preferences.getString('patientId');
-    debugPrint("patientId $token");
+    var token = preferences.getString('userId');
+    debugPrint("userId $token");
     if (token != null && token.isNotEmpty) {
       return true;
     } else {
@@ -106,10 +104,10 @@ class AuthController extends GetxController {
 
   logout() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
-    var token = preferences.getString('token');
-    debugPrint("token $token");
+    var token = preferences.getString('userId');
+    debugPrint("userId $token");
     if (token != null && token.isNotEmpty) {
-      preferences.remove('token');
+      preferences.remove('userId');
       // await Get.off(() => const LoadingPage());
     } else {
       return false;
@@ -144,7 +142,7 @@ class AuthController extends GetxController {
     //     if (res['status'] == "200") {
     //       loginLoading = false;
     //       commonPrint(status: res['status'], msg: res['message']);
-    //       Map storedData = {"patientId": "${res['patient_id']}"};
+    //       Map storedData = {"userId": "${res['userId']}"};
     //       storeLocalDevice(body: storedData);
     //       Get.off(() => HomeMain());
     //       commonSnackBar(title: "Success", msg: "Login Successfully");
@@ -195,7 +193,7 @@ class AuthController extends GetxController {
     //       } else {
     //         registerLoading = false;
     //         commonPrint(status: res['status'], msg: res['message']);
-    //         Map storedData = {"patientId": "${res['patient_id']}"};
+    //         Map storedData = {"userId": "${res['userId']}"};
     //         storeLocalDevice(body: storedData);
     //         Get.off(() => HomeMain());
     //         commonSnackBar(title: "Success", msg: "Register Successfully");
